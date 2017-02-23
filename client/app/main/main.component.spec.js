@@ -31,4 +31,5 @@ describe('Component: MainComponent', function() {
     expect(mainComponent.awesomeThings.length)
       .toBe(4);
   });
+
 });
