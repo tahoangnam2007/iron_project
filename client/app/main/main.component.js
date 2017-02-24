@@ -12,6 +12,7 @@ export class MainController {
   constructor($http) {
     this.$http = $http;
   }
+  
 
   $onInit() {
     this.$http.get('/api/things')
@@ -32,6 +33,9 @@ export class MainController {
   deleteThing(thing) {
     this.$http.delete(`/api/things/${thing._id}`);
   }
+
+  
+  
 }
 
 export default angular.module('ironProjectApp.main', [ngRoute])

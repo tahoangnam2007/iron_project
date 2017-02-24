@@ -5,7 +5,7 @@ import {
   MainController
 } from './main.component';
 
-describe('Component: MainComponent', function() {
+describe('Component: MainComponent', function () {
   beforeEach(angular.mock.module(main));
 
   var scope;
@@ -13,7 +13,7 @@ describe('Component: MainComponent', function() {
   var $httpBackend;
 
   // Initialize the controller and a mock scope
-  beforeEach(inject(function(_$httpBackend_, $http, $componentController, $rootScope) {
+  beforeEach(inject(function (_$httpBackend_, $http, $componentController, $rootScope) {
     $httpBackend = _$httpBackend_;
     $httpBackend.expectGET('/api/things')
       .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
@@ -25,11 +25,13 @@ describe('Component: MainComponent', function() {
     });
   }));
 
-  it('should attach a list of things to the controller', function() {
+  it('should attach a list of things to the controller', function () {
     mainComponent.$onInit();
     $httpBackend.flush();
     expect(mainComponent.awesomeThings.length)
       .toBe(4);
   });
 
+
+  
 });
