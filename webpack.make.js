@@ -183,7 +183,7 @@ module.exports = function makeWebpackConfig(options) {
                 //
                 // Reference: https://github.com/webpack/style-loader
                 // Use style-loader in development for hot-loading
-                ? ExtractTextPlugin.extract('style', 'css!postcss')
+                ? ExtractTextPlugin.extract('style', 'css!postcss!resolve-url-loader')
                 // Reference: https://github.com/webpack/null-loader
                 // Skip loading css in test mode
                 : 'null'
